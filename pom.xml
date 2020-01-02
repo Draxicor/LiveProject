@@ -11,11 +11,17 @@
 			<version>1.2.5</version>
 		</dependency>
 		<dependency>
-			<groupId>info.cukes</groupId>
-			<artifactId>cucumber-junit</artifactId>
-			<version>1.2.5</version>
-			<scope>test</scope>
+    		<groupId>io.cucumber</groupId>
+    		<artifactId>cucumber-junit</artifactId>
+    		<version>4.8.0</version>
+    		<scope>test</scope>
 		</dependency>
+		
+		<dependency>
+    <groupId>io.cucumber</groupId>
+    <artifactId>cucumber-java</artifactId>
+    <version>4.8.0</version>
+</dependency>
 		<dependency>
 			<groupId>log4j</groupId>
 			<artifactId>log4j</artifactId>
@@ -39,7 +45,7 @@
 		<dependency>
 			<groupId>io.github.bonigarcia</groupId>
 			<artifactId>webdrivermanager</artifactId>
-			<version>2.2.2</version>
+			<version>3.7.1</version>
 		</dependency>
 		<dependency>
 			<groupId>junit</groupId>
