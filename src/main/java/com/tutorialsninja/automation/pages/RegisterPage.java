@@ -9,7 +9,9 @@ import org.openqa.selenium.support.PageFactory;
 import com.tutorialsninja.automation.base.Base;
 import com.tutorialsninja.automation.framework.Elements;
 
-import cucumber.api.DataTable;
+import io.cucumber.datatable.DataTable;
+
+
 
 public class RegisterPage {
 	
@@ -46,8 +48,8 @@ public class RegisterPage {
 		   
 		   Elements.TypeText(RegisterPage.firstName, map.get("FirstName"));
 		   Elements.TypeText(RegisterPage.lastName, map.get("LastName"));
-		   //Elements.TypeText(RegisterPage.email, System.currentTimeMillis()+map.get("Email"));
-		   Elements.TypeText(RegisterPage.email, map.get("Email"));
+		   Elements.TypeText(RegisterPage.email, System.currentTimeMillis()+map.get("Email"));
+		   //Elements.TypeText(RegisterPage.email, map.get("Email"));
 		   Elements.TypeText(RegisterPage.telephone, map.get("Telephone"));
 		   Elements.TypeText(RegisterPage.password, map.get("Password"));
 		   Elements.TypeText(RegisterPage.confirmPassword, map.get("Password"));

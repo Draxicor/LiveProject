@@ -1,6 +1,6 @@
 package com.tutorialsninja.automation.stepdef;
 
-import java.util.Map;
+import org.junit.Assert;
 
 import com.tutorialsninja.automation.base.Base;
 import com.tutorialsninja.automation.framework.Elements;
@@ -8,12 +8,9 @@ import com.tutorialsninja.automation.pages.AccountSuccess;
 import com.tutorialsninja.automation.pages.HeadersSection;
 import com.tutorialsninja.automation.pages.RegisterPage;
 
-import cucumber.api.DataTable;
-import cucumber.api.java.en.And;
-import cucumber.api.java.en.Given;
-import cucumber.api.java.en.Then;
-import cucumber.api.java.en.When;
-import junit.framework.Assert;
+import io.cucumber.datatable.DataTable;
+import io.cucumber.java.en.*;
+
 
 
 public class Register {
@@ -50,7 +47,6 @@ public class Register {
 	    Elements.click(RegisterPage.continueButton);
 	}
 
-	@SuppressWarnings("deprecation")
 	@Then("^I should see the user account was created successfully$")
 	public void i_should_see_the_user_account_was_created_successfully()  {
 	    
