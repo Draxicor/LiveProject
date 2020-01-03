@@ -6,16 +6,12 @@ import org.openqa.selenium.support.PageFactory;
 
 import com.tutorialsninja.automation.base.Base;
 
-public class HeadersSection {
-	
-	public HeadersSection() {
+public class AccountSuccess {
+
+	public AccountSuccess() {
 		PageFactory.initElements(Base.driver, this);
 	}
 	
-	
-	@FindBy(xpath="//span[text()=\"My Account\"]")
-	public static WebElement myAccountLink;
-	
-	@FindBy(linkText="Register")
-	public static WebElement register;
+	@FindBy(linkText="Success")
+	public static WebElement successBreadcrumb;
 }

@@ -6,7 +6,7 @@ Feature: Registration functionality scenarios
     When I provide all the bellow details
       | FirstName | Ricardo            |
       | LastName  | Nogueira           |
-      | Email     | draxicor@gmail.com |
+      | Email     | draxicor2@gmail.com |
       | Telephone |         9111111111 |
       | Password  | lolamix            |
     And I select the privacy policy
