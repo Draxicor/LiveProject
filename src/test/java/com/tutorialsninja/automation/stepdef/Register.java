@@ -66,5 +66,9 @@ public class Register {
 	    Assert.assertTrue(Elements.isDisplayed(RegisterPage.warning));
 	}
 
+	@And("^I subscribe to Newsletter$")
+	public void i_subscribe_to_Newsletter() {
+	    Elements.click(RegisterPage.newsletterYes);
+	}
 	
 }

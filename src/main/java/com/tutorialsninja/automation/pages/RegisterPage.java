@@ -49,6 +49,9 @@ public class RegisterPage {
 	@FindBy(css="body:nth-child(2) div.container:nth-child(4) > div.alert.alert-danger.alert-dismissible")
 	public static WebElement warning;
 	
+	@FindBy(css="div.container:nth-child(4) div.row div.col-sm-9 form.form-horizontal:nth-child(3) fieldset:nth-child(3) div.form-group:nth-child(2) div.col-sm-10 label.radio-inline:nth-child(1) > input:nth-child(1)")
+	public static WebElement newsletterYes;
+	
 	public static void enterAllDetails(DataTable dataTable) {
 		 Map<String, String> map = dataTable.asMap(String.class,String.class);
 		   
