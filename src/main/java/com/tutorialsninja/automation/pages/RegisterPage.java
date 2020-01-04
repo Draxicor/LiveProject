@@ -52,15 +52,21 @@ public class RegisterPage {
 	@FindBy(css="div.container:nth-child(4) div.row div.col-sm-9 form.form-horizontal:nth-child(3) fieldset:nth-child(3) div.form-group:nth-child(2) div.col-sm-10 label.radio-inline:nth-child(1) > input:nth-child(1)")
 	public static WebElement newsletterYes;
 	
-	public static void enterAllDetails(DataTable dataTable) {
-		 Map<String, String> map = dataTable.asMap(String.class,String.class);
-		   
-		   Elements.TypeText(RegisterPage.firstName, map.get("FirstName"));
-		   Elements.TypeText(RegisterPage.lastName, map.get("LastName"));
-		   Elements.TypeText(RegisterPage.email, System.currentTimeMillis()+map.get("Email"));
-		   //Elements.TypeText(RegisterPage.email, map.get("Email"));
-		   Elements.TypeText(RegisterPage.telephone, map.get("Telephone"));
-		   Elements.TypeText(RegisterPage.password, map.get("Password"));
-		   Elements.TypeText(RegisterPage.confirmPassword, map.get("Password"));
+	
+	
+public static void enterAllRegistrationDetails(DataTable dataTable,String detailsType) {
+		
+		Map<String,String> map = dataTable.asMap(String.class,String.class);
+		Elements.TypeText(RegisterPage.firstName,map.get("FirstName"));
+		Elements.TypeText(RegisterPage.lastName,map.get("LastName"));
+		Elements.TypeText(RegisterPage.telephone,map.get("Telephone"));
+		Elements.TypeText(RegisterPage.password,map.get("Password"));
+		Elements.TypeText(RegisterPage.confirmPassword,map.get("Password"));
+		
+		if(detailsType.equalsIgnoreCase("duplicate"))
+			Elements.TypeText(RegisterPage.email,map.get("Email"));
+		else
+			Elements.TypeText(RegisterPage.email,System.currentTimeMillis()+map.get("Email"));
+	
 	}
 }

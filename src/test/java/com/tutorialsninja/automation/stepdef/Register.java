@@ -35,7 +35,7 @@ public class Register {
 	@When("^I provide all the bellow details$")
 	public void i_provide_all_the_bellow_details(DataTable dataTable) {
 	
-		RegisterPage.enterAllDetails(dataTable);
+		RegisterPage.enterAllRegistrationDetails(dataTable, "valid");
 	}
 
 	@And("^I select the privacy policy$")
@@ -71,4 +71,13 @@ public class Register {
 	    Elements.click(RegisterPage.newsletterYes);
 	}
 	
+	@When("^I provide the below duplicate details into the fields$")
+	public void i_provide_the_below_duplicate_details_into_the_fields(io.cucumber.datatable.DataTable dataTable) {
+		RegisterPage.enterAllRegistrationDetails(dataTable, "duplicate");
+	}
+
+	@Then("^I should see the warning message stating that the user is already created$")
+	public void i_should_see_the_warning_message_stating_that_the_user_is_already_created() {
+		Assert.assertTrue(Elements.isDisplayed(RegisterPage.warning));
+	}
 }

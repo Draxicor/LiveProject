@@ -36,3 +36,17 @@ Feature: Registration functionality scenarios
     And I select the privacy policy
     And I click the continue button
     Then I should see the user account was created successfully
+
+  @Register @Four 
+  Scenario: Verify whether the user is restricted from registring a duplicate account
+    Given I launch the application
+    And I navigate to Account Registration page
+    When I provide the below duplicate details into the fields
+      | FirstName | Ricardo             |
+      | LastName  | Nogueira            |
+      | Email     | draxicor2@gmail.com |
+      | Telephone |          9111111111 |
+      | Password  | lolamix             |
+    And I select the privacy policy
+    And I click the continue button
+    Then I should see the warning message stating that the user is already created
