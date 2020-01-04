@@ -2,6 +2,7 @@ package com.tutorialsninja.automation.stepdef;
 
 import org.junit.Assert;
 
+import com.sun.tools.sjavac.Log;
 import com.tutorialsninja.automation.base.Base;
 import com.tutorialsninja.automation.framework.Elements;
 import com.tutorialsninja.automation.pages.AccountSuccess;
@@ -57,13 +58,12 @@ public class Register {
 	
 	@Then("^I should see that the User Account is not created$")
 	public void i_should_see_that_the_User_Account_is_not_created() {
-	    Elements.isDisplayed(RegisterPage.registerBreadcrumb);
-	    //do boolean logic
+	   Assert.assertTrue(Elements.isDisplayed(RegisterPage.registerBreadcrumb));
 	}
 
 	@And("^I should see the error messages informing the user to fill the mandatory fields$")
 	public void i_should_see_the_error_messages_informing_the_user_to_fill_the_mandatory_fields() {
-	    
+	    Assert.assertTrue(Elements.isDisplayed(RegisterPage.warning));
 	}
 
 	
