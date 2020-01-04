@@ -25,7 +25,7 @@ public class Register {
 	    Base.driver.get(Base.reader.getUrl());
 	}
 
-	@And("^I naviate to Account Registration page$")
+	@And("^I navigate to Account Registration page$")
 	public void i_naviate_to_Account_Registration_page()  {
 	    Elements.click(HeadersSection.myAccountLink);
 	    Elements.click(HeadersSection.register);
@@ -53,6 +53,17 @@ public class Register {
 		Assert.assertTrue(Elements.isDisplayed(AccountSuccess.successBreadcrumb));
 		
 		
+	}
+	
+	@Then("^I should see that the User Account is not created$")
+	public void i_should_see_that_the_User_Account_is_not_created() {
+	    Elements.isDisplayed(RegisterPage.registerBreadcrumb);
+	    //do boolean logic
+	}
+
+	@And("^I should see the error messages informing the user to fill the mandatory fields$")
+	public void i_should_see_the_error_messages_informing_the_user_to_fill_the_mandatory_fields() {
+	    
 	}
 
 	

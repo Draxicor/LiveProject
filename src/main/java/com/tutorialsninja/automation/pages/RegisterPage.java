@@ -43,6 +43,9 @@ public class RegisterPage {
 	@FindBy(css="div.container:nth-child(4) div.row div.col-sm-9 form.form-horizontal:nth-child(3) div.buttons:nth-child(4) div.pull-right > input.btn.btn-primary:nth-child(3)")
 	public static WebElement continueButton;
 	
+	@FindBy(linkText="http://tutorialsninja.com/demo/index.php?route=account/register")
+	public static WebElement registerBreadcrumb; 
+	
 	public static void enterAllDetails(DataTable dataTable) {
 		 Map<String, String> map = dataTable.asMap(String.class,String.class);
 		   
