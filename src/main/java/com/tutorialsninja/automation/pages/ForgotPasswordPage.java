@@ -6,12 +6,15 @@ import org.openqa.selenium.support.PageFactory;
 
 import com.tutorialsninja.automation.base.Base;
 
-public class MyAccountPage {
-
-	public MyAccountPage() {
+public class ForgotPasswordPage {
+	
+	public ForgotPasswordPage() {
 		PageFactory.initElements(Base.driver, this);
 	}
+
+	@FindBy(id="input-email")
+	public static WebElement emailField;
 	
-	@FindBy(linkText="Register for an affiliate account")
-	public static WebElement registerffiliateAccount;
+	@FindBy(css="input[type='submit'][value='Continue']")
+	public static WebElement continueButton;
 }

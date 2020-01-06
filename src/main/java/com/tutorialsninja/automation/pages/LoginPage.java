@@ -23,6 +23,12 @@ public class LoginPage {
 	@FindBy(css="input[type='submit'][value='Login']")
 	public static WebElement loginButton;
 	
+	@FindBy(css="div[class$='alert-dismissible']")
+	public static WebElement warning;
+	
+	@FindBy(linkText="Forgotten Password")
+	public static WebElement forgotPassword;
+	
 	public static void doLogin(String email, String password) {
 		Elements.TypeText(LoginPage.emailField, email);
 	    Elements.TypeText(LoginPage.passwordField, password);
