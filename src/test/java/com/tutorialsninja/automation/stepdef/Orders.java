@@ -4,8 +4,6 @@ package com.tutorialsninja.automation.stepdef;
 
 
 import org.junit.Assert;
-import org.openqa.selenium.support.ui.Wait;
-
 import com.tutorialsninja.automation.framework.Browser;
 import com.tutorialsninja.automation.framework.Elements;
 import com.tutorialsninja.automation.framework.Waits;

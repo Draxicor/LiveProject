@@ -2,7 +2,6 @@ package com.tutorialsninja.automation.stepdef;
 
 import org.junit.Assert;
 
-import com.sun.tools.sjavac.Log;
 import com.tutorialsninja.automation.base.Base;
 import com.tutorialsninja.automation.framework.Elements;
 import com.tutorialsninja.automation.pages.AccountSuccess;
