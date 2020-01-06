@@ -12,6 +12,12 @@ public class HeadersSection {
 		PageFactory.initElements(Base.driver, this);
 	}
 	
+	@FindBy(name="search")
+	public static WebElement searchBox;
+	
+	@FindBy(css="button[class$='btn-lg']")
+	public static WebElement searchButton;
+	
 	
 	@FindBy(xpath="//span[text()=\"My Account\"]")
 	public static WebElement myAccountLink;
