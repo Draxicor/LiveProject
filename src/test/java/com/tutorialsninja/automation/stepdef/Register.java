@@ -44,7 +44,7 @@ public class Register {
 	}
 
 	@And("^I click the continue button$")
-	public void i_click_the_continue_button() throws Throwable {
+	public void i_click_the_continue_button() {
 	    Elements.click(RegisterPage.continueButton);
 	}
 
@@ -64,6 +64,11 @@ public class Register {
 	@And("^I should see the error messages informing the user to fill the mandatory fields$")
 	public void i_should_see_the_error_messages_informing_the_user_to_fill_the_mandatory_fields() {
 	    Assert.assertTrue(Elements.isDisplayed(RegisterPage.warning));
+	    Assert.assertTrue(Elements.isDisplayed(RegisterPage.firstNamewarning));
+	    Assert.assertTrue(Elements.isDisplayed(RegisterPage.lastNamewarning));
+	    Assert.assertTrue(Elements.isDisplayed(RegisterPage.emailWarning));
+	    Assert.assertTrue(Elements.isDisplayed(RegisterPage.telephoneWarning));
+	    Assert.assertTrue(Elements.isDisplayed(RegisterPage.passwordWarning));
 	}
 
 	@And("^I subscribe to Newsletter$")
@@ -78,6 +83,6 @@ public class Register {
 
 	@Then("^I should see the warning message stating that the user is already created$")
 	public void i_should_see_the_warning_message_stating_that_the_user_is_already_created() {
-		Assert.assertTrue(Elements.isDisplayed(RegisterPage.warning));
+		Assert.assertTrue(Elements.VerifyTextEquals(RegisterPage.warning, "Warning: E-Mail Address is already registered!"));
 	}
 }

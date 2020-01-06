@@ -46,11 +46,26 @@ public class RegisterPage {
 	@FindBy(linkText="Register")
 	public static WebElement registerBreadcrumb;
 	
-	@FindBy(css="body:nth-child(2) div.container:nth-child(4) > div.alert.alert-danger.alert-dismissible")
+	@FindBy(css="div[class$='alert-dismissible']")
 	public static WebElement warning;
 	
-	@FindBy(css="div.container:nth-child(4) div.row div.col-sm-9 form.form-horizontal:nth-child(3) fieldset:nth-child(3) div.form-group:nth-child(2) div.col-sm-10 label.radio-inline:nth-child(1) > input:nth-child(1)")
+	@FindBy(css="input[name='newsletter'][value='1']")
 	public static WebElement newsletterYes;
+	
+	@FindBy(css="input[id='input-firstname']+div")
+	public static WebElement firstNamewarning;
+	
+	@FindBy(css="input[id='input-lastname']+div")
+	public static WebElement lastNamewarning;
+	
+	@FindBy(css="input[id='input-email']+div")
+	public static WebElement emailWarning;
+	
+	@FindBy(css="input[id='input-telephone']+div")
+	public static WebElement telephoneWarning;
+	
+	@FindBy(css="input[id='input-password']+div")
+	public static WebElement passwordWarning;
 	
 	
 	
