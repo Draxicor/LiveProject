@@ -16,7 +16,7 @@ plugin={"html:target/cucumber_html_report"}
 
 
 )
-public class Runner {
+public class TestRunner {
 	
 	
 
